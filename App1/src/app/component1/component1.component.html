@@ -1,3 +1,23 @@
-<p>
-  component1 works!1
-</p>
+<body>
+  <h1>component1 : Data Binding </h1>
+  <h3>Interpolation et Property binding </h3>
+
+  <h5>property de objet</h5>
+  <ul>
+    <li>
+   Nom :{{info.nom}}
+   </li>
+   <li>
+      Email. {{info.email}}
+    </li>
+      <li>
+       Telephone :  {{info.tel}}
+    </li>
+    <div *ngFor="let c of comments"> {{c.message}} <span>{{c.data |date:'dd/MM/yyyy:HH:mm:ss'}}</span></div>
+   </ul>
+   <h5>property de valeur 1 + 1 = {{1+1}}</h5>
+   <h5>property de channee   {{ch1}}</h5>
+   <h4>property de fonction  ====>> {{afficherChane()}}</h4>
+  
+</body>
+  

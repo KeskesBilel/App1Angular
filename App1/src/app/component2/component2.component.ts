@@ -6,7 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./component2.component.css']
 })
 export class Component2Component implements OnInit {
-
+  chchang: string='     ';
+  echange(){
+  this.chchang = 'le phrase que affichier apres le click ';
+}
   constructor() { }
 
   ngOnInit() {

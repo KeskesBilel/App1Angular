@@ -9,6 +9,7 @@ import {MatButtonModule, MatCheckboxModule} from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule,Routes } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 const r:Routes=[
   {path:'component1' , component: Component1Component },
   {path:'component2' , component: Component2Component },
@@ -31,6 +32,7 @@ const r:Routes=[
       BrowserAnimationsModule,
       NoopAnimationsModule,
     RouterModule.forRoot(r),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,33 @@
-<p>
-  component3 works!
-</p>
+<body>
+  <h1>component2 : Data Binding </h1>
+  <h3>Tow day Binding </h3>
+<h3>Methode 1 :</h3>
+<div class="form-group">
+  <label class="control-label">Message : </label>
+  <input type="text" [(ngModel)]="commentaire.message" >
+  <button (click)="onajouter()" [disabled]="!commentaire.message" >Ajoute commmentaire </button>
+  </div>
+  <div>
+    <ul class="list-group"> 
+      <li class="list-group-item" *ngFor="let c of comments"> {{c.message}} <span>{{c.data |date:'dd/MM/yyyy:HH:mm:ss'}}</span>
+      </li>
+      </ul>
+  </div>
+  
+  <h3>Methode 2 :</h3>
+  <form #f="ngForm" (ngSubmit)="onAjouter(f.value)" >
+    <div class="form-group">
+      <label class="control-label" >Message : </label>
+      <input name="message"  type="text"  [(ngModel)]="commentairee.message">
+      <button  type="submit" [disabled]="! f.valid">Ajoute commmentaire </button>
+      </div>
+      <div>
+        <ul class="list-group"> 
+          <li class="list-group-item" *ngFor="let c of commentss"> {{c.message}} <span>{{c.data |date:'dd/MM/yyyy:HH:mm:ss'}}</span>
+          </li>
+          </ul>
+      </div>
+
+  </form>
+
+</body>
