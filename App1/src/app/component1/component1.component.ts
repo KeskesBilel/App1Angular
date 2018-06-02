@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AboutService } from '../services/ser.services';
 
 @Component({
   selector: 'app-component1',
@@ -6,17 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./component1.component.css']
 })
 export class Component1Component implements OnInit {
+
+  info : any ; 
 afficherChane(){
   return 'le fonction returne un channee de carecteur ';
 }
 
 ch1:string = 'le channee peut eter un URL d img   ';
-  info = {
-    nom: "bilel",
-    email:"bilelkeskes1@gmail.com",
-    tel : "02568"
-  
-} 
+
+
 comments =[
     {
       data :new Date(),message:"aaa"
@@ -27,7 +26,10 @@ comments =[
     {
       data :new Date(),message:"ccc"  }
 ]
-  constructor() { }
+  constructor(private aboutservice:AboutService) {
+
+this.info = this.aboutservice.getInfo();
+   }
 
   ngOnInit() {
   }

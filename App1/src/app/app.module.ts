@@ -10,6 +10,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule,Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
+import { AboutService } from './services/ser.services';
 const r:Routes=[
   {path:'component1' , component: Component1Component },
   {path:'component2' , component: Component2Component },
@@ -34,7 +35,7 @@ const r:Routes=[
     RouterModule.forRoot(r),
     FormsModule
   ],
-  providers: [],
+  providers: [AboutService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
