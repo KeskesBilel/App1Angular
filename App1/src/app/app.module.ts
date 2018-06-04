@@ -11,10 +11,12 @@ import {NoopAnimationsModule} from '@angular/platform-browser/animations';
 import { RouterModule,Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { AboutService } from './services/ser.services';
+import { ExampleDirectiveComponent } from './example-directive/example-directive.component';
 const r:Routes=[
   {path:'component1' , component: Component1Component },
   {path:'component2' , component: Component2Component },
   {path:'component3' , component: Component3Component },
+  {path:'component4' , component: ExampleDirectiveComponent },
   {path:'' , redirectTo:'/component1' ,
    pathMatch: 'full'}
   ];
@@ -24,7 +26,8 @@ const r:Routes=[
     AppComponent,
     Component1Component,
     Component2Component,
-    Component3Component
+    Component3Component,
+    ExampleDirectiveComponent
   ],
   imports: [
     BrowserModule,
