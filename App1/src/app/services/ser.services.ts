@@ -15,4 +15,9 @@ export class AboutService{
     getInfo(){
         return this.info ; 
     }
+    s: any ; 
+    getSomme(a : any  ,b : any ){
+this.s=a+b;
+        return  ("somme est : " +this.s+"de "+a+ "+"+b);
+    }
 }

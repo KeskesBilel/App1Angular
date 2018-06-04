@@ -9,6 +9,7 @@ import { AboutService } from '../services/ser.services';
 export class Component1Component implements OnInit {
 
   info : any ; 
+  inf : any ; 
 afficherChane(){
   return 'le fonction returne un channee de carecteur ';
 }
@@ -29,6 +30,7 @@ comments =[
   constructor(private aboutservice:AboutService) {
 
 this.info = this.aboutservice.getInfo();
+this.inf =this.aboutservice.getSomme(5,5);
    }
 
   ngOnInit() {
